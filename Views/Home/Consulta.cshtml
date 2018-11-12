@@ -1,0 +1,39 @@
+@model Finanzas2018.Models.Accion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalle Acción</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo.Url)
+        </dt>
+        <dd>
+           <img src="@Html.Raw(@Model.Logo.Url)" alt="logo simbolo" class="center img-responsive" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quote.Symbol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quote.Symbol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quote.CompanyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quote.CompanyName)
+        </dd>
+         <dt>
+            @Html.DisplayNameFor(model => model.Quote.LatestPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quote.LatestPrice)
+        </dd>
+        
+    </dl>
+</div>
